@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  API_KEY: 'please ask me the key'
+  API_KEY: 'please ask me the key',
+  TAILWIND_MODE: 'watch',
+  NODE_ENV: 'development'
 };
 
 /*

@@ -1,9 +1,11 @@
 module.exports = {
+  mode: "jit",
   content: [
-    "./src/**/*.{html,ts,tsx,jsx}",
+    "./src/app/**/*.{html,ts,tsx,jsx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
+

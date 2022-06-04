@@ -1,0 +1,54 @@
+.h-65vh { height: 75vh; }
+.min-h-50vh { min-height: 50vh; }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;    
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*align-items: stretch;  not needed, it's by default*/
+}  
+nav li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: center; 
+}
+nav a {
+  text-decoration: none;
+  color: rgb(168 162 158);
+  padding: 20px 20px 18px;
+  display: block;
+  height:100%;
+  box-sizing:border-box; /*Don't forget this*/
+  font-weight: 400;
+
+  &:hover {
+    color: rgb(68 64 60);
+    font-weight: 500;
+  }
+
+  &:active {
+    color: rgb(125 211 252);
+    font-weight: 500;
+  }
+}
+
+.feature-video-area {
+  height: auto;
+  max-height: 26rem;
+}
+
+.feature-video-cover {
+  height: 26rem;
+  background-image: url('~src/app/public/assets/video-img.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen {
+  
+}

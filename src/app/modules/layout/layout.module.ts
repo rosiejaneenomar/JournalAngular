@@ -8,6 +8,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { RouterModule } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { LayoutRoutingModule } from './layout-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   exports:[LayoutComponent],
   imports: [
     CommonModule,
+    LayoutRoutingModule,
     RouterModule,
     NzLayoutModule,
     NzMenuModule,

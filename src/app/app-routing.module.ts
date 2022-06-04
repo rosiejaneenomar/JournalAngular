@@ -5,17 +5,16 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full', 
-    redirectTo: 'users',
-    
+    redirectTo: 'public',
   },
   {
-    path: 'users',
-    loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule)
+    path: 'journal',
+    loadChildren: () => import('./modules/layout/layout.module').then(m => m.LayoutModule)
   },
   {
-    path: 'posts',
-    loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)
-  }
+    path: 'public',
+    loadChildren: () => import('./public/haven/haven.module').then(m => m.HavenModule)
+  },
 ];
 
 @NgModule({
