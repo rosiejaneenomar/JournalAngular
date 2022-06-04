@@ -10,12 +10,12 @@
             #rla="routerLinkActive" 
             [nzSelected]="rla.isActive"
             [routerLinkActiveOptions]="{exact: true}"
-            [routerLink]="['/posts']" >View Posts</li>
+            [routerLink]="['posts']" >View Posts</li>
         </ul>
       </li>
       <li nz-submenu nzTitle="Users" nzIcon="user">
         <ul>
-          <li nz-menu-item [routerLink]="['/users']" 
+          <li nz-menu-item [routerLink]="['users']" 
             routerLinkActive
             #rla="routerLinkActive" 
             [nzSelected]="rla.isActive"
