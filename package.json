@@ -3,16 +3,24 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "cross-env NODE_ENV=development TAILWIND_MODE=watch  ng serve",
+    "dev": "cross-env NODE_ENV=development TAILWIND_MODE=watch ng serve",
+    "start": "node heroku.js",
     "build": "cross-env NODE_ENV=production ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "cross-env NODE_ENV=development TAILWIND_MODE=watch ng build --prod"
   },
   "private": true,
+  "engines": {
+    "node": "14.19.3",
+    "npm": "6.14.17"
+  },
   "dependencies": {
     "@angular/animations": "~12.2.0",
+    "@angular/cli": "~12.2.17",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
+    "@angular/compiler-cli": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
     "@angular/platform-browser": "~12.2.0",
@@ -22,9 +30,12 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@ngxs/store": "^3.7.3-dev.master-b00eeb3",
+    "express": "^4.18.1",
     "ng-zorro-antd": "^12.1.1",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "typescript": "~4.3.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -35,6 +46,7 @@
     "@types/node": "^12.11.1",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
