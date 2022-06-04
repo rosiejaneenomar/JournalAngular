@@ -1,5 +1,7 @@
 // get environment variables dynamically and create environment.ts file
 const fs = require("fs");
+
+// https://cxxyao2.github.io/angular-deploy-github-and-heroku.html
 const targetPath = "./src/environments/environment.ts";
 const envConfigFile = `export const environment = {
   production: '${process.env.PRODUCTION}',
